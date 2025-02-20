@@ -10,9 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_20_141741) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_20_151519) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.integer "level"
+    t.text "backstory"
+    t.integer "race"
+    t.integer "path"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_characters_on_user_id"
+  end
+
+  create_table "characters_users", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_characters_users_on_character_id"
+    t.index ["user_id"], name: "index_characters_users_on_user_id"
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "pseudo"
@@ -27,5 +49,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_20_141741) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "role"
   end
+
+  add_foreign_key "characters", "users"
+  add_foreign_key "characters_users", "characters"
+  add_foreign_key "characters_users", "users"
 end
