@@ -163,3 +163,248 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 56ms (Views: 14.6ms | ActiveRecord: 5.0ms (1 query, 0 cached) | GC: 0.5ms)
 
 
+Started GET "/characters" for 127.0.0.1 at 2025-02-20 17:40:06 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (31.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" /*action='index',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/index.html.erb:8
+  Rendered characters/index.html.erb within layouts/application (Duration: 35.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | GC: 0.0ms)
+Completed 200 OK in 101ms (Views: -6.3ms | ActiveRecord: 46.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:40:08 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 47.5ms | GC: 1.8ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 94.2ms | GC: 21.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 98.2ms | GC: 21.9ms)
+Completed 200 OK in 156ms (Views: 98.3ms | ActiveRecord: 11.5ms (1 query, 0 cached) | GC: 21.9ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:42:31 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 42.6ms | GC: 1.1ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 46.3ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 68.0ms | GC: 1.1ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 25.4ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+  
+ActionView::Template::Error (Association :users not found)
+Caused by: RuntimeError (Association :users not found)
+
+Information for: ActionView::Template::Error (Association :users not found):
+    11:     <%= f.input :race %>
+    12:     <%= f.input :path %>
+    13:     <%= f.association :user %>
+    14:         <%= f.association :users %>
+    15:   </div>
+    16: 
+    17:   <div class="form-actions">
+  
+app/views/characters/_form.html.erb:14
+app/views/characters/_form.html.erb:2
+app/views/characters/new.html.erb:5
+
+Information for cause: RuntimeError (Association :users not found):
+  
+app/views/characters/_form.html.erb:14
+app/views/characters/_form.html.erb:2
+app/views/characters/new.html.erb:5
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:44:22 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:14
+  Rendered characters/_form.html.erb (Duration: 23.0ms | GC: 4.9ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 23.9ms | GC: 4.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | GC: 4.9ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 11.3ms (1 query, 0 cached) | GC: 4.9ms)
+
+
+  
+ActionView::Template::Error (Association :users not found)
+Caused by: RuntimeError (Association :users not found)
+
+Information for: ActionView::Template::Error (Association :users not found):
+    12:     <%= f.input :path %>
+    13: 
+    14:         <%= f.association :user, label: 'Auteurice de l\'annonce', include_blank: false %>
+    15:     <%= f.association :users, 
+    16:                       label: 'Personnes ayant l\'annonce en marque-page',
+    17:                       as: :check_boxes %>
+    18:   </div>
+  
+app/views/characters/_form.html.erb:15
+app/views/characters/_form.html.erb:2
+app/views/characters/new.html.erb:5
+
+Information for cause: RuntimeError (Association :users not found):
+  
+app/views/characters/_form.html.erb:15
+app/views/characters/_form.html.erb:2
+app/views/characters/new.html.erb:5
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:44:45 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:14
+  Rendered characters/_form.html.erb (Duration: 26.0ms | GC: 5.2ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 28.8ms | GC: 5.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | GC: 5.2ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 40.6ms (1 query, 0 cached) | GC: 7.7ms)
+
+
+  
+ActionView::Template::Error (Association :users not found)
+Caused by: RuntimeError (Association :users not found)
+
+Information for: ActionView::Template::Error (Association :users not found):
+    12:     <%= f.input :path %>
+    13: 
+    14:     <%= f.association :user, label: 'Auteurice de l\'annonce', include_blank: false %>
+    15:     <%= f.association :users, 
+    16:                       label: 'Personnes ayant l\'annonce en marque-page',
+    17:                       as: :check_boxes %>
+    18:   </div>
+  
+app/views/characters/_form.html.erb:15
+app/views/characters/_form.html.erb:2
+app/views/characters/new.html.erb:5
+
+Information for cause: RuntimeError (Association :users not found):
+  
+app/views/characters/_form.html.erb:15
+app/views/characters/_form.html.erb:2
+app/views/characters/new.html.erb:5
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:45:02 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:14
+  Rendered characters/_form.html.erb (Duration: 16.9ms | GC: 2.8ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 18.6ms | GC: 2.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | GC: 4.2ms)
+Completed 200 OK in 74ms (Views: 23.0ms | ActiveRecord: 6.0ms (1 query, 0 cached) | GC: 6.8ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:45:32 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/characters/_form.html.erb:15
+  Rendered characters/_form.html.erb (Duration: 39.1ms | GC: 0.0ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 60.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | GC: 0.0ms)
+Completed 200 OK in 107ms (Views: 47.4ms | ActiveRecord: 27.7ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:45:58 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:14
+  Rendered characters/_form.html.erb (Duration: 20.6ms | GC: 1.3ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 22.3ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | GC: 1.9ms)
+Completed 200 OK in 52ms (Views: 24.3ms | ActiveRecord: 5.2ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:46:19 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/_form.html.erb (Duration: 7.9ms | GC: 0.0ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 10.6ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | GC: 2.1ms)
+Completed 200 OK in 52ms (Views: 20.5ms | ActiveRecord: 9.6ms (0 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:47:06 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 37.9ms | GC: 5.4ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 39.3ms | GC: 5.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | GC: 6.2ms)
+Completed 200 OK in 130ms (Views: 30.0ms | ActiveRecord: 26.6ms (1 query, 0 cached) | GC: 6.2ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:48:53 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 18.1ms | GC: 3.5ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 19.4ms | GC: 3.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | GC: 3.5ms)
+Completed 200 OK in 75ms (Views: 23.8ms | ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 6.3ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-20 17:50:20 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 62.6ms | GC: 0.0ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 68.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | GC: 0.0ms)
+Completed 200 OK in 139ms (Views: 60.0ms | ActiveRecord: 41.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/characters" for 127.0.0.1 at 2025-02-20 17:50:27 +0100
+Processing by CharactersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (4.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" /*action='index',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/index.html.erb:8
+  Rendered characters/index.html.erb within layouts/application (Duration: 6.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 4.5ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-20 17:50:40 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='RpCharacters',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/_user.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered users/index.html.erb within layouts/application (Duration: 13.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 29.2ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 6.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2025-02-20 17:50:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='RpCharacters',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 3.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.0ms)
+
+
