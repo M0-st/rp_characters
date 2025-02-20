@@ -1,0 +1,19 @@
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2188563640031683740) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RpCharacters'*/[0m
+Migrating to CreateUsers (20250220141741)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN /*application='RpCharacters'*/[0m
+  [1m[35m (140.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "pseudonym" character varying, "photo" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250220141741') RETURNING "version" /*application='RpCharacters'*/[0m
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[35mCOMMIT /*application='RpCharacters'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2188563640031683740) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-20 15:18:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/debian/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/debian/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 108ms (Views: 25.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
