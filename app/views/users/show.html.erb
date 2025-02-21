@@ -7,4 +7,13 @@
   <%= link_to "Back to users", users_path %>
 
   <%= button_to "Destroy this user", @user, method: :delete %>
+
+    <%= link_to "Your chracters", characters_path(@user)%> |
+
+ <ul>
+    <% @user.characters.each do |character| %>
+      <li><%= link_to character %></li>
+    <% end %>
+  </ul>
+
 </div>
