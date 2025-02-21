@@ -65,3 +65,5 @@ gem 'simple_form', '~> 5.3'
 gem 'bootstrap', '~> 5.3.3'
 gem 'dartsass-rails'
 gem 'enum_help'
+
+gem "devise", "~> 4.9"

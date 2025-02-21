@@ -1,0 +1,8 @@
+<h1>Hello</h1>
+
+<% @characters.each do |character| %>
+    <%= render character %>
+    <p>
+        <%= link_to "Show this character", character %>
+    </p>
+<% end %>

@@ -1,5 +1,5 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: %i[ show edit update destroy ]
+  before_action :set_character, only: %i[show edit update destroy]
 
   # GET /characters or /characters.json
   def index
@@ -22,10 +22,11 @@ class CharactersController < ApplicationController
   # POST /characters or /characters.json
   def create
     @character = Character.new(character_params)
+    @character.user = current_user
 
     respond_to do |format|
       if @character.save
-        format.html { redirect_to @character, notice: "Character was successfully created." }
+        format.html { redirect_to @character, notice: 'Character was successfully created.' }
         format.json { render :show, status: :created, location: @character }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class CharactersController < ApplicationController
   def update
     respond_to do |format|
       if @character.update(character_params)
-        format.html { redirect_to @character, notice: "Character was successfully updated." }
+        format.html { redirect_to @character, notice: 'Character was successfully updated.' }
         format.json { render :show, status: :ok, location: @character }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +53,20 @@ class CharactersController < ApplicationController
     @character.destroy!
 
     respond_to do |format|
-      format.html { redirect_to characters_path, status: :see_other, notice: "Character was successfully destroyed." }
+      format.html { redirect_to characters_path, status: :see_other, notice: 'Character was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_character
-      @character = Character.find(params.expect(:id))
-    end
 
-    # Only allow a list of trusted parameters through.
-    def character_params
-      params.expect(character: [ :name, :image, :level, :backstory, :race, :path, :user_id ])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_character
+    @character = Character.find(params.expect(:id))
+  end
+
+  # Only allow a list of trusted parameters through.
+  def character_params
+    params.expect(character: [:name, :image, :level, :backstory, :race, :path]) # rubocop:disable Style/SymbolArray
+  end
 end
