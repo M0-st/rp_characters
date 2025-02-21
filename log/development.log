@@ -2102,3 +2102,13 @@ Migrating to DropCharactersUsers (20250221101408)
   [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT /*application='RpCharacters'*/[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2188563640031683740) /*application='RpCharacters'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2188563640031683740) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RpCharacters'*/[0m
+Migrating to DropMembers (20250221103633)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN /*application='RpCharacters'*/[0m
+  [1m[35m (17.3ms)[0m  [1m[35mDROP TABLE "members" /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250221103633') RETURNING "version" /*application='RpCharacters'*/[0m
+  [1m[36mTRANSACTION (19.0ms)[0m  [1m[35mCOMMIT /*application='RpCharacters'*/[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2188563640031683740) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (14.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
