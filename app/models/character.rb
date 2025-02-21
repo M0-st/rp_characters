@@ -2,12 +2,12 @@ class Character < ApplicationRecord
   belongs_to :user
 
   enum race: {
-    human: 0,
-    orc: 1,
-    elf: 2,
-    dwarf: 3,
-    halfling: 4,
-    gnomme: 5,
+    human: 1,
+    orc: 2,
+    elf: 3,
+    dwarf: 4,
+    halfling: 5,
+    gnomme: 6
   }
 
   def to_s

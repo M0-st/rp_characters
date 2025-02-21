@@ -3046,3 +3046,77 @@ Information for cause: RuntimeError (Undeclared attribute type for enum '' in Ch
   
 app/views/users/show.html.erb:14
   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Started GET "/users/1" for 127.0.0.1 at 2025-02-21 12:11:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='RpCharacters',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.0ms | GC: 4.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 4.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 5.2ms)
+
+
+  
+ActionView::Template::Error (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.)
+Caused by: RuntimeError (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.)
+
+Information for: ActionView::Template::Error (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.):
+    11: <%= link_to "New character", new_character_path %>
+    12: 
+    13:  <ul>
+    14:     <% @user.characters.each do |character| %>
+    15:       <li><%= link_to character %></li>
+    16:     <% end %>
+    17:   </ul>
+  
+app/views/users/show.html.erb:14
+
+Information for cause: RuntimeError (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.):
+  
+app/views/users/show.html.erb:14
+Started GET "/users" for 127.0.0.1 at 2025-02-21 12:13:36 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='RpCharacters',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/_user.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered users/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 10.5ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2025-02-21 12:13:40 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='RpCharacters',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:63:in 'UsersController#set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.)
+Caused by: RuntimeError (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.)
+
+Information for: ActionView::Template::Error (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.):
+    11: <%= link_to "New character", new_character_path %>
+    12: 
+    13:  <ul>
+    14:     <% @user.characters.each do |character| %>
+    15:       <li><%= link_to character %></li>
+    16:     <% end %>
+    17:   </ul>
+  
+app/views/users/show.html.erb:14
+
+Information for cause: RuntimeError (Undeclared attribute type for enum '' in Character. Enums must be backed by a database column or declared with an explicit type via `attribute`.):
+  
+app/views/users/show.html.erb:14
