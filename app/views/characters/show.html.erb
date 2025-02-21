@@ -3,13 +3,8 @@
 <%= render @character %>
 
 <div>
-  <button>
     <%= link_to "Edit this character", edit_character_path(@character) %> |
-  </button>
-
-  <button>
     <%= link_to "Back to characters", characters_path %> |
-  </button>
 
 
   <%= button_to "Destroy this character", @character, method: :delete %>

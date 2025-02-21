@@ -7,11 +7,8 @@
 <div id="characters">
   <% @characters.each do |character| %>
     <%= render character %>
-    <button>
-      <%= link_to "Show this character", character %>
-    </button>
+    <%= link_to "Show this character", character %>
   <% end %>
 </div>
-
 <%= link_to "New character", new_character_path %>
-</button>
+
