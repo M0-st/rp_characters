@@ -1,7 +1,7 @@
 class Character < ApplicationRecord
   belongs_to :user
 
-  enum race: {
+  enum :race, {
     human: 1,
     orc: 2,
     elf: 3,
