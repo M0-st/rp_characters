@@ -10,6 +10,17 @@ class Character < ApplicationRecord
     gnomme: 6
   }
 
+  enum :path, {
+    knight: 1,
+    rogue: 2,
+    barbarian: 3,
+    wizard: 4,
+    druid: 5,
+    monk: 6,
+    priest: 7,
+    sorcerer: 8
+  }
+
   def to_s
     name
   end
