@@ -1,9 +1,9 @@
 
 <h1><%= current_user.pseudonym %></h1><br>
-<p>Your infos : </p>
-<%= current_user.email %><br>
-<p>Game master : <%= current_user.role %></p><br>
-<%= image_tag current_user.photo %><br><br>
+<p>Your email : <%= current_user.email %><br>
+Game master : <%= current_user.role %><br>
+Your profile picture : <br>
+<%= image_tag current_user.photo %></p><br><br>
 
 
 <%= link_to "New character", new_character_path %><br><br>
