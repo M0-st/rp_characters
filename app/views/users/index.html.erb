@@ -7,10 +7,12 @@
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>
-    <p>
+    <button>
       <%= link_to "Show this user", user %>
-    </p>
+    </button>
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<button>
+  <%= link_to "New user", new_user_path %>
+</button>

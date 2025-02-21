@@ -3,12 +3,18 @@
 <%= render @user %>
 
 <div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+  <button>
+    <%= link_to "Edit this user", edit_user_path(@user) %>
+  </button>
+  <button>
+    <%= link_to "Back to users", users_path %>
+  </button>
 
   <%= button_to "Destroy this user", @user, method: :delete %>
 
-<%= link_to "New character", new_character_path %>
+<button>
+  <%= link_to "New character", new_character_path %>
+</button>
 
  <ul>
     <% @user.characters.each do |character| %>

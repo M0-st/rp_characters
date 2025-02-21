@@ -7,12 +7,16 @@
 <div id="characters">
   <% @characters.each do |character| %>
     <%= render character %>
-    <p>
+    <button>
       <%= link_to "Show this character", character %>
-    </p>
+    </button>
   <% end %>
 </div>
 
+<button>
 <%= link_to "Back to users", users_path %> |
+</button>
 
+<button>
 <%= link_to "New character", new_character_path %>
+</button>
