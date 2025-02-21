@@ -3187,3 +3187,29 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 17ms (Views: 4.7ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (10.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-21 12:20:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 170.3ms | GC: 56.7ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 172.7ms | GC: 56.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 489.8ms | GC: 162.3ms)
+Completed 200 OK in 955ms (Views: 488.3ms | ActiveRecord: 74.6ms (1 query, 0 cached) | GC: 162.3ms)
+
+
+Started GET "/characters/new" for 127.0.0.1 at 2025-02-21 12:21:35 +0100
+Processing by CharactersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering characters/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='new',application='RpCharacters',controller='characters'*/[0m
+  ↳ app/views/characters/_form.html.erb:13
+  Rendered characters/_form.html.erb (Duration: 157.2ms | GC: 0.0ms)
+  Rendered characters/new.html.erb within layouts/application (Duration: 162.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 234.0ms | GC: 0.0ms)
+Completed 200 OK in 399ms (Views: 228.1ms | ActiveRecord: 78.4ms (1 query, 0 cached) | GC: 6.9ms)
+
+
