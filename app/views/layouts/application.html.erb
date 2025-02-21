@@ -31,7 +31,7 @@
         </a>
       
         <div class="row col align-self-end">
-          <button href="" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Log out</button>
+          <%= button_to ("Log out", destroy_user_session_path, method: :delete)%>
         </div>
       </div> 
     </nav>
