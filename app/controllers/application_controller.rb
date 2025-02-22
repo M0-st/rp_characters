@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[pseudonym role photo password])
-    devise_parameter_sanitizer.permit(:sign_in, keys: [:pseudonym])
+    devise_parameter_sanitizer.permit(:sign_in, keys: %i[pseudonym password])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[pseudonym role photo password current_password])
   end
 
   def after_sign_in_path_for(resource)
-    root_path 
+    index_path
   end
 end

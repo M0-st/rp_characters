@@ -7172,3 +7172,536 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 439ms (Views: 15.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2188563640031683740) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='RpCharacters'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2188563640031683740) /*application='RpCharacters'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:07:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 39ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c917a968>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | GC: 1.7ms)
+Completed 200 OK in 74ms (Views: 40.6ms | ActiveRecord: 8.4ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:12:33 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c8dba968>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.4ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.7ms)
+Completed 200 OK in 67ms (Views: 11.0ms | ActiveRecord: 39.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:23:12 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4cbe5dfc0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.9ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { :role :form}) do |f| %>
+  <div class="form-inputs">
+    <%- if devise_mapping.recoverable? %>
+      <%= f.input :pseudonym,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "pseudonym" }%>
+      <%= f.input :current_password,
+                  required: true,
+                  input_html: { autocomplete: "current-password" }%>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/rp_characters/app/views/devise/sessions/new.html.erb:3: syntax errors found
+  [2m 1 | [m            @virtual_path = "devise/sessions/new";;@output_buffer.safe_append='<!-- BEGIN app/views/devise/sessions/new.html.erb -->'; @output_buffer.safe_append='<h2>Log in</h2>
+  [2m 2 | [m
+[1;31m> [m[2m 3 | [m...  :form}) do |f| ; @output_buffer.safe_append='
+ ...
+  [2m   | [m    [1;31m^[m expected a `}` to close the hash literal
+  [2m   | [m    [1;31m^[m expected a `=>` between the hash key and value
+  [2m   | [m     [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m     [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a value in the hash literal
+  [2m   | [m          [1;31m^[m unexpected '}', ignoring it
+  [2m   | [m          [1;31m^[m unexpected '}', expecting end-of-input
+  [2m   | [m           [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m             [1;31m^~[m unexpected 'do', ignoring it
+  [2m   | [m                [1;31m^[m unexpected '|', ignoring it
+  [2m   | [m                    [1;31m^[m unexpected ';'; expected an expression after the operator
+  [2m 4 | [m  <div class="form-inputs">
+  [2m 5 | [m'.freeze;     if devise_mapping.recoverable? 
+[2m  ~~~~~~[m
+  [2m22 | [m @output_buffer.safe_append='
+  [2m23 | [m'.freeze;@output_buffer.safe_append='<!-- END app/views/devise/sessions/new.html.erb -->';@output_buffer
+[1;31m> [m[2m24 | [m          end
+  [2m   | [m          [1;31m^~~[m unexpected 'end', ignoring it
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { :role :form}) do |f| %>
+  <div class="form-inputs">
+    <%- if devise_mapping.recoverable? %>
+      <%= f.input :pseudonym,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "pseudonym" }%>
+      <%= f.input :current_password,
+                  required: true,
+                  input_html: { autocomplete: "current-password" }%>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Log in</h2>
+2:    
+3:    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { :role :form}) do |f| %>
+4:      <div class="form-inputs">
+5:        <%- if devise_mapping.recoverable? %>
+6:          <%= f.input :pseudonym,
+7:                      required: true,
+8:                      autofocus: true,
+9:                      input_html: { autocomplete: "pseudonym" }%>
+10:          <%= f.input :current_password,
+11:                      required: true,
+12:                      input_html: { autocomplete: "current-password" }%>
+13:        <% end %>
+14:      </div>
+15:    
+16:      <div class="form-actions">
+17:        <%= f.button :submit, "Sign in" %>
+18:      </div>
+19:    <% end %>
+20:    
+21:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:3: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/rp_characters/app/views/devise/sessions/new.html.erb:3: syntax errors found
+  [2m 1 | [m            @virtual_path = "devise/sessions/new";;@output_buffer.safe_append='<!-- BEGIN app/views/devise/sessions/new.html.erb -->'; @output_buffer.safe_append='<h2>Log in</h2>
+  [2m 2 | [m
+[1;31m> [m[2m 3 | [m...  :form}) do |f| ; @output_buffer.safe_append='
+ ...
+  [2m   | [m    [1;31m^[m expected a `}` to close the hash literal
+  [2m   | [m    [1;31m^[m expected a `=>` between the hash key and value
+  [2m   | [m     [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m     [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a value in the hash literal
+  [2m   | [m          [1;31m^[m unexpected '}', ignoring it
+  [2m   | [m          [1;31m^[m unexpected '}', expecting end-of-input
+  [2m   | [m           [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m             [1;31m^~[m unexpected 'do', ignoring it
+  [2m   | [m                [1;31m^[m unexpected '|', ignoring it
+  [2m   | [m                    [1;31m^[m unexpected ';'; expected an expression after the operator
+  [2m 4 | [m  <div class="form-inputs">
+  [2m 5 | [m'.freeze;     if devise_mapping.recoverable? 
+[2m  ~~~~~~[m
+  [2m22 | [m @output_buffer.safe_append='
+  [2m23 | [m'.freeze;@output_buffer.safe_append='<!-- END app/views/devise/sessions/new.html.erb -->';@output_buffer
+[1;31m> [m[2m24 | [m          end
+  [2m   | [m          [1;31m^~~[m unexpected 'end', ignoring it
+):
+  
+app/views/devise/sessions/new.html.erb:3: syntax errors found
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:23:48 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c9142db0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 29.4ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { :role :form}) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :pseudonym,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "pseudonym" }%>
+    <%= f.input :current_password,
+                required: true,
+                input_html: { autocomplete: "current-password" }%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/rp_characters/app/views/devise/sessions/new.html.erb:3: syntax errors found
+  [2m 1 | [m            @virtual_path = "devise/sessions/new";;@output_buffer.safe_append='<!-- BEGIN app/views/devise/sessions/new.html.erb -->'; @output_buffer.safe_append='<h2>Log in</h2>
+  [2m 2 | [m
+[1;31m> [m[2m 3 | [m...  :form}) do |f| ; @output_buffer.safe_append='
+ ...
+  [2m   | [m    [1;31m^[m expected a `}` to close the hash literal
+  [2m   | [m    [1;31m^[m expected a `=>` between the hash key and value
+  [2m   | [m     [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m     [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a value in the hash literal
+  [2m   | [m          [1;31m^[m unexpected '}', ignoring it
+  [2m   | [m          [1;31m^[m unexpected '}', expecting end-of-input
+  [2m   | [m           [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m             [1;31m^~[m unexpected 'do', ignoring it
+  [2m   | [m                [1;31m^[m unexpected '|', ignoring it
+  [2m   | [m                    [1;31m^[m unexpected ';'; expected an expression after the operator
+  [2m 4 | [m  <div class="form-inputs">
+  [2m 5 | [m    '.freeze; @output_buffer.append=( f.input :pseudonym,
+[2m  ~~~~~~[m
+  [2m20 | [m @output_buffer.safe_append='
+  [2m21 | [m'.freeze;@output_buffer.safe_append='<!-- END app/views/devise/sessions/new.html.erb -->';@output_buffer
+[1;31m> [m[2m22 | [m          end
+  [2m   | [m          [1;31m^~~[m unexpected 'end', ignoring it
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { :role :form}) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :pseudonym,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "pseudonym" }%>
+    <%= f.input :current_password,
+                required: true,
+                input_html: { autocomplete: "current-password" }%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Log in</h2>
+2:    
+3:    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { :role :form}) do |f| %>
+4:      <div class="form-inputs">
+5:        <%= f.input :pseudonym,
+6:                    required: true,
+7:                    autofocus: true,
+8:                    input_html: { autocomplete: "pseudonym" }%>
+9:        <%= f.input :current_password,
+10:                    required: true,
+11:                    input_html: { autocomplete: "current-password" }%>
+12:      </div>
+13:    
+14:      <div class="form-actions">
+15:        <%= f.button :submit, "Sign in" %>
+16:      </div>
+17:    <% end %>
+18:    
+19:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:3: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/rp_characters/app/views/devise/sessions/new.html.erb:3: syntax errors found
+  [2m 1 | [m            @virtual_path = "devise/sessions/new";;@output_buffer.safe_append='<!-- BEGIN app/views/devise/sessions/new.html.erb -->'; @output_buffer.safe_append='<h2>Log in</h2>
+  [2m 2 | [m
+[1;31m> [m[2m 3 | [m...  :form}) do |f| ; @output_buffer.safe_append='
+ ...
+  [2m   | [m    [1;31m^[m expected a `}` to close the hash literal
+  [2m   | [m    [1;31m^[m expected a `=>` between the hash key and value
+  [2m   | [m     [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m     [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m     [1;31m^[m unexpected ':'; expected a value in the hash literal
+  [2m   | [m          [1;31m^[m unexpected '}', ignoring it
+  [2m   | [m          [1;31m^[m unexpected '}', expecting end-of-input
+  [2m   | [m           [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m             [1;31m^~[m unexpected 'do', ignoring it
+  [2m   | [m                [1;31m^[m unexpected '|', ignoring it
+  [2m   | [m                    [1;31m^[m unexpected ';'; expected an expression after the operator
+  [2m 4 | [m  <div class="form-inputs">
+  [2m 5 | [m    '.freeze; @output_buffer.append=( f.input :pseudonym,
+[2m  ~~~~~~[m
+  [2m20 | [m @output_buffer.safe_append='
+  [2m21 | [m'.freeze;@output_buffer.safe_append='<!-- END app/views/devise/sessions/new.html.erb -->';@output_buffer
+[1;31m> [m[2m22 | [m          end
+  [2m   | [m          [1;31m^~~[m unexpected 'end', ignoring it
+):
+  
+app/views/devise/sessions/new.html.erb:3: syntax errors found
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:24:13 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c9175788>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | GC: 1.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | GC: 2.2ms)
+Completed 200 OK in 33ms (Views: 12.0ms | ActiveRecord: 4.3ms (0 queries, 0 cached) | GC: 3.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:24:18 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c8deee20>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:24:18 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c8fa2dc0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "testest", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:24:29 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c9210788>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.1ms)
+Completed 200 OK in 16ms (Views: 4.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:24:56 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c9346b98>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 7.3ms | ActiveRecord: 2.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:25:03 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c942c9e0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | GC: 1.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 1.7ms)
+Completed 200 OK in 24ms (Views: 10.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:26:26 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c93170a0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 43.4ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | GC: 1.0ms)
+Completed 200 OK in 69ms (Views: 48.3ms | ActiveRecord: 3.1ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:26:29 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c8e30b40>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:26:34 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c90cd8f8>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:26:41 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c8db32a8>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.3ms)
+Completed 200 OK in 29ms (Views: 10.8ms | ActiveRecord: 2.3ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:31:59 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c901a460>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 12.1ms | ActiveRecord: 3.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:32:03 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4ca9664a0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 10:32:08 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "1"}, "commit" => "Sign in"}
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "1"}, "commit" => "Sign in"}
+[31mUnpermitted parameter: :current_password. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fc4c9418670>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "amelie", "current_password" => "[FILTERED]", "remember_me" => "1"}, "commit" => "Sign in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 1.1ms)
+Completed 200 OK in 27ms (Views: 15.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
