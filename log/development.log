@@ -5877,3 +5877,1298 @@ Completed 200 OK in 22ms (Views: 7.3ms | ActiveRecord: 0.8ms (2 queries, 0 cache
 >>>>>>> 4caa0571fd4e6eb7499fa45cf3b9a3989ead25ca
 
 
+Started GET "/" for 127.0.0.1 at 2025-02-21 23:22:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (59.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 194ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:22:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 111.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 347.9ms | GC: 47.7ms)
+Completed 200 OK in 1024ms (Views: 446.2ms | ActiveRecord: 245.8ms (0 queries, 0 cached) | GC: 47.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:23:02 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 67ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fafe3dc2d10>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.2ms | GC: 2.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | GC: 2.0ms)
+Completed 200 OK in 755ms (Views: 63.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2025-02-21 23:28:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-02-21 23:31:25 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 74.8ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | GC: 0.9ms)
+Completed 200 OK in 142ms (Views: 93.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-02-21 23:32:31 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "Matthias", "role" => "1", "photo" => "data:image/jpeg;base64,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", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]"}, "commit" => "Sign up"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Exists? (13.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'matthias.oudart@mmibordeaux.com' LIMIT 1 /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 810ms (Views: 59.3ms | ActiveRecord: 98.9ms (1 query, 0 cached) | GC: 4.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:32:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 52.2ms | GC: 43.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | GC: 43.0ms)
+Completed 200 OK in 137ms (Views: 58.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 43.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:32:48 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fb001dcf5b0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | GC: 0.0ms)
+Completed 200 OK in 601ms (Views: 58.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:41:39 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 67ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fafe3dcebb0>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.8ms | GC: 2.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | GC: 2.8ms)
+Completed 200 OK in 659ms (Views: 55.1ms | ActiveRecord: 37.3ms (0 queries, 0 cached) | GC: 4.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:41:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 49ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fb001df6ae8>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | GC: 0.0ms)
+Completed 200 OK in 497ms (Views: 17.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:43:25 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 46ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fafe3d0d168>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.2ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | GC: 0.3ms)
+Completed 200 OK in 744ms (Views: 68.6ms | ActiveRecord: 51.4ms (0 queries, 0 cached) | GC: 4.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:44:34 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 56ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fb001d89420>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.2ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | GC: 0.8ms)
+Completed 200 OK in 550ms (Views: 29.0ms | ActiveRecord: 8.6ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2025-02-21 23:44:37 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 8.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2025-02-21 23:44:56 +0100
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]"}, "commit" => "Send me reset password instructions"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'matthias.oudart@mmibordeaux.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='RpCharacters',controller='passwords'*/[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = '4b8d48ed3d686ab5971bb753b76bba0409547a85a2059dc992afa4d167056387' ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='RpCharacters',controller='passwords'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN /*action='create',application='RpCharacters',controller='passwords'*/[0m
+  [1m[36mUser Update (94.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = '2025-02-21 22:44:57.284742', "reset_password_token" = '4b8d48ed3d686ab5971bb753b76bba0409547a85a2059dc992afa4d167056387', "reset_password_sent_at" = '2025-02-21 22:44:57.282551' WHERE "users"."id" = 9 /*action='create',application='RpCharacters',controller='passwords'*/[0m
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[35mCOMMIT /*action='create',application='RpCharacters',controller='passwords'*/[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 227.1ms
+Delivered mail 67b901ea79196_beb1c58303db@debian.mail (307.2ms)
+Date: Fri, 21 Feb 2025 23:44:58 +0100
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: matthias.oudart@mmibordeaux.com
+Message-ID: <67b901ea79196_beb1c58303db@debian.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!-- BEGIN app/views/devise/mailer/reset_password_instructions.html.erb --><p>Hello matthias.oudart@mmibordeaux.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=K5C3Bz4Hxr5StdEdWPE5">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+<!-- END app/views/devise/mailer/reset_password_instructions.html.erb -->
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 1791ms (ActiveRecord: 133.1ms (3 queries, 0 cached) | GC: 62.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:44:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.6ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | GC: 1.4ms)
+Completed 200 OK in 93ms (Views: 16.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-02-21 23:58:15 +0100
+  
+NameError (undefined local variable or method 'user' for class ApplicationController):
+  
+app/controllers/application_controller.rb:14:in '<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in '<main>'
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-21 23:58:35 +0100
+  
+NameError (undefined local variable or method 'user' for class ApplicationController):
+  
+app/controllers/application_controller.rb:14:in '<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in '<main>'
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:00:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.9ms | GC: 1.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | GC: 1.7ms)
+Completed 200 OK in 248ms (Views: 75.6ms | ActiveRecord: 49.6ms (0 queries, 0 cached) | GC: 5.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:00:32 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 104ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+[31mUnpermitted parameter: :pseudonym. Context: { controller: Devise::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007fafe3fced98>, params: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in", "controller" => "devise/sessions", "action" => "create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.7ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.7ms)
+Completed 200 OK in 679ms (Views: 14.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-02-22 00:00:38 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.2ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | GC: 1.4ms)
+Completed 200 OK in 122ms (Views: 31.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:12:41 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 56ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 90.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 105.6ms | GC: 1.3ms)
+Completed 200 OK in 885ms (Views: 127.7ms | ActiveRecord: 80.4ms (0 queries, 0 cached) | GC: 7.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:12:50 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 63ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | GC: 0.8ms)
+Completed 200 OK in 552ms (Views: 48.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-02-22 00:13:01 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 76.3ms | GC: 2.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | GC: 2.2ms)
+Completed 200 OK in 194ms (Views: 83.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-02-22 00:13:45 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "iuobin", "role" => "0", "photo" => "data:image/jpeg;base64,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", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]"}, "commit" => "Sign up"}
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fb001a0da30>, params: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "iuobin", "role" => "0", "photo" => "data:image/jpeg;base64,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", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]"}, "commit" => "Sign up", "controller" => "devise/registrations", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Exists? (33.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'bueidnvàeuinfef@gmail.com' LIMIT 1 /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Create (43.8ms)[0m  [1m[32mINSERT INTO "users" ("pseudonym", "photo", "created_at", "updated_at", "role", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES (NULL, NULL, '2025-02-21 23:13:46.857601', '2025-02-21 23:13:46.857601', NULL, 'bueidnvàeuinfef@gmail.com', '$2a$12$t.X4LzAPV2SdfvWY0Le2GOjCWJVp4PWixCQn7EMDVQduGcL270QiO', NULL, NULL, NULL) RETURNING "id" /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT /*action='create',application='RpCharacters',controller='registrations'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 907ms (ActiveRecord: 83.0ms (2 queries, 0 cached) | GC: 74.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:13:46 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.1ms | GC: 4.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 4.4ms)
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 11.8ms (1 query, 0 cached) | GC: 40.4ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.)
+Caused by: ArgumentError (Nil location provided. Can't build URI.)
+
+Information for: ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <p>Your email : <%= current_user.email %><br>
+    4: Game master : <%= current_user.role %><br>
+    5: Your profile picture : <br>
+    6: <%= image_tag current_user.photo %></p><br><br>
+    7: 
+    8: 
+    9: <%= link_to "New character", new_character_path %><br><br>
+  
+app/views/home/index.html.erb:6
+
+Information for cause: ArgumentError (Nil location provided. Can't build URI.):
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:14:13 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.8ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 1.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 6.1ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.)
+Caused by: ArgumentError (Nil location provided. Can't build URI.)
+
+Information for: ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <p>Your email : <%= current_user.email %><br>
+    4: Game master : <%= current_user.role %><br>
+    5: Your profile picture : <br>
+    6: <%= image_tag current_user.photo %></p><br><br>
+    7: 
+    8: 
+    9: <%= link_to "New character", new_character_path %><br><br>
+  
+app/views/home/index.html.erb:6
+
+Information for cause: ArgumentError (Nil location provided. Can't build URI.):
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:16:29 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (30.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (76.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 155.9ms | GC: 12.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 159.0ms | GC: 12.7ms)
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 139.7ms (2 queries, 0 cached) | GC: 19.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+))
+Caused by: ArgumentError (wrong number of arguments (given 0, expected 1+))
+
+Information for: ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    25: 
+    26: <%= button_to(
+    27:         "Edit your account",
+    28:         edit_registration_path,
+    29:         method: :edit
+    30:       ) %>
+  
+app/views/home/index.html.erb:28
+
+Information for cause: ArgumentError (wrong number of arguments (given 0, expected 1+)):
+  
+app/views/home/index.html.erb:28
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:18:13 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.4ms | GC: 2.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 2.5ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 8.9ms (1 query, 0 cached) | GC: 11.6ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.)
+Caused by: ArgumentError (Nil location provided. Can't build URI.)
+
+Information for: ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <p>Your email : <%= current_user.email %><br>
+    4: Game master : <%= current_user.role %><br>
+    5: Your profile picture : <br>
+    6: <%= image_tag current_user.photo %></p><br><br>
+    7: 
+    8: 
+    9: <%= link_to "New character", new_character_path %><br><br>
+  
+app/views/home/index.html.erb:6
+
+Information for cause: ArgumentError (Nil location provided. Can't build URI.):
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:19:52 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 25.9ms (1 query, 0 cached) | GC: 12.0ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.)
+Caused by: ArgumentError (Nil location provided. Can't build URI.)
+
+Information for: ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <p>Your email : <%= current_user.email %><br>
+    4: Game master : <%= current_user.role %><br>
+    5: Your profile picture : <br>
+    6: <%= image_tag current_user.photo %></p><br><br>
+    7: <%= current_user.photo.inspect %>
+    8: 
+    9: <%= link_to "New character", new_character_path %><br><br>
+  
+app/views/home/index.html.erb:6
+
+Information for cause: ArgumentError (Nil location provided. Can't build URI.):
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:20:03 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.8ms | GC: 3.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 3.9ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 3.9ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.)
+Caused by: ArgumentError (Nil location provided. Can't build URI.)
+
+Information for: ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <p>Your email : <%= current_user.email %><br>
+    4: Game master : <%= current_user.role %><br>
+    5: Your profile picture : <br>
+    6: <%= image_tag current_user.photo %></p><br><br>
+    7: <%= current_user.photo.inspect %>
+    8: 
+    9: <%= link_to "New character", new_character_path %><br><br>
+  
+app/views/home/index.html.erb:6
+
+Information for cause: ArgumentError (Nil location provided. Can't build URI.):
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:22:54 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 15.3ms | GC: 3.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 3.3ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 27.4ms (2 queries, 0 cached) | GC: 10.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+))
+Caused by: ArgumentError (wrong number of arguments (given 0, expected 1+))
+
+Information for: ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    25: 
+    26: <%= button_to(
+    27:         "Edit your account",
+    28:         edit_registration_path,
+    29:         method: :edit
+    30:       ) %>
+  
+app/views/home/index.html.erb:28
+
+Information for cause: ArgumentError (wrong number of arguments (given 0, expected 1+)):
+  
+app/views/home/index.html.erb:28
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:24:31 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | GC: 1.9ms)
+Completed 200 OK in 331ms (Views: 22.2ms | ActiveRecord: 93.7ms (2 queries, 0 cached) | GC: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:25:14 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 18.4ms | GC: 5.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | GC: 5.1ms)
+Completed 200 OK in 107ms (Views: 18.5ms | ActiveRecord: 16.9ms (2 queries, 0 cached) | GC: 8.3ms)
+
+
+Started POST "/users/edit" for 127.0.0.1 at 2025-02-22 00:25:17 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/edit"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:32:59 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 15.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 46.9ms (2 queries, 0 cached) | GC: 17.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe2846fe0>)
+Caused by: NameError (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe2846fe0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe2846fe0>):
+    23:       ) %>
+    24: 
+    25: 
+    26: <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+  
+app/views/home/index.html.erb:26
+
+Information for cause: NameError (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe2846fe0>):
+  
+app/views/home/index.html.erb:26
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:33:54 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (14.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 47.4ms | GC: 5.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | GC: 5.3ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 51.6ms (2 queries, 0 cached) | GC: 17.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>)
+Caused by: NameError (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>):
+    23:       ) %>
+    24: 
+    25: 
+    26: <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+  
+app/views/home/index.html.erb:26
+
+Information for cause: NameError (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>):
+  
+app/views/home/index.html.erb:26
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:34:03 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 7.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>)
+Caused by: NameError (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>):
+    23:       ) %>
+    24: 
+    25: 
+    26: <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+  
+app/views/home/index.html.erb:26
+
+Information for cause: NameError (undefined local variable or method 'resource_name' for an instance of #<Class:0x00007fafe3223ea0>):
+  
+app/views/home/index.html.erb:26
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:36:14 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 91.5ms | GC: 7.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 149.3ms | GC: 23.8ms)
+Completed 200 OK in 420ms (Views: 188.0ms | ActiveRecord: 74.5ms (2 queries, 0 cached) | GC: 31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:36:21 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 8.3ms | GC: 1.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | GC: 2.5ms)
+Completed 200 OK in 91ms (Views: 10.8ms | ActiveRecord: 1.2ms (2 queries, 0 cached) | GC: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:36:38 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (2.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 29.0ms | GC: 3.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | GC: 6.0ms)
+Completed 200 OK in 162ms (Views: 37.8ms | ActiveRecord: 26.1ms (2 queries, 0 cached) | GC: 44.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:37:03 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (8.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 71.6ms | GC: 1.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | GC: 1.8ms)
+Completed 200 OK in 227ms (Views: 50.5ms | ActiveRecord: 84.1ms (2 queries, 0 cached) | GC: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:37:45 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 80.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 101.2ms | GC: 0.0ms)
+Completed 200 OK in 197ms (Views: 41.9ms | ActiveRecord: 97.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/edit" for 127.0.0.1 at 2025-02-22 00:37:57 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/edit"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:40:17 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 14.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 15.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (Could not find a valid mapping for nil)
+Caused by: RuntimeError (Could not find a valid mapping for nil)
+
+Information for: ActionView::Template::Error (Could not find a valid mapping for nil):
+    16:     </p>
+    17: <% end %>
+    18: 
+    19:   <%= link_to "Edit your account", edit_registration_path(@user) %> |
+    20: 
+    21: 
+    22:       <%= button_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
+  
+app/views/home/index.html.erb:19
+
+Information for cause: RuntimeError (Could not find a valid mapping for nil):
+  
+app/views/home/index.html.erb:19
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:40:53 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 77.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 124.8ms (2 queries, 0 cached) | GC: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'user_edit_registration_path' for an instance of #<Class:0x00007fafe217bb98>)
+Caused by: NameError (undefined local variable or method 'user_edit_registration_path' for an instance of #<Class:0x00007fafe217bb98>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'user_edit_registration_path' for an instance of #<Class:0x00007fafe217bb98>):
+    16:     </p>
+    17: <% end %>
+    18: 
+    19:   <%= link_to "Edit your account", user_edit_registration_path %> |
+    20: 
+    21: 
+    22:       <%= button_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
+  
+app/views/home/index.html.erb:19
+
+Information for cause: NameError (undefined local variable or method 'user_edit_registration_path' for an instance of #<Class:0x00007fafe217bb98>):
+  
+app/views/home/index.html.erb:19
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:41:32 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 11.7ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | GC: 0.2ms)
+Completed 200 OK in 96ms (Views: 16.1ms | ActiveRecord: 10.0ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2025-02-22 00:41:44 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='RpCharacters',controller='registrations'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 14.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 0.0ms)
+Completed 200 OK in 104ms (Views: 18.8ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2025-02-22 00:42:44 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2323e00>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 56.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 60.2ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 682ms (Views: 62.1ms | ActiveRecord: 11.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2025-02-22 00:43:05 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Load (34.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2589a78>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 19.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 920ms (Views: 32.5ms | ActiveRecord: 35.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2025-02-22 00:43:30 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "plo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2740790>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "plo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2740790>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "plo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2740790>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "plo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2740790>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "plo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 646ms (ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:43:30 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (73.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 77.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 86.1ms | GC: 0.0ms)
+Completed 200 OK in 165ms (Views: 14.4ms | ActiveRecord: 76.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:43:35 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (36.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.0ms)
+Completed 200 OK in 106ms (Views: 7.4ms | ActiveRecord: 38.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2025-02-22 00:43:39 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='RpCharacters',controller='registrations'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 39.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | GC: 0.0ms)
+Completed 200 OK in 86ms (Views: 46.5ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2025-02-22 00:43:56 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Load (49.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2d5a838>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2d5a838>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2d5a838>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+[31mUnpermitted parameters: :pseudonym, :role, :photo. Context: { controller: Devise::RegistrationsController, action: update, request: #<ActionDispatch::Request:0x00007fafe2d5a838>, params: {"_method" => "put", "authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "https://oiseaux.natagora.be/sites/dqo/files/styles/animal_tea/public/2023-01/picepe_m_0.JPG?itok=eznZEdC5", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update", "controller" => "devise/registrations", "action" => "update"} }[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 691ms (ActiveRecord: 47.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:43:57 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (78.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 85.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 90.7ms | GC: 0.0ms)
+Completed 200 OK in 135ms (Views: 13.3ms | ActiveRecord: 82.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:46:45 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 10.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | GC: 3.7ms)
+Completed 200 OK in 103ms (Views: 22.6ms | ActiveRecord: 16.7ms (2 queries, 0 cached) | GC: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:50:54 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 11.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | GC: 1.1ms)
+Completed 200 OK in 129ms (Views: 16.8ms | ActiveRecord: 41.7ms (2 queries, 0 cached) | GC: 8.6ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2025-02-22 00:50:59 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='RpCharacters',controller='registrations'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 13.2ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 1.2ms)
+Completed 200 OK in 67ms (Views: 20.3ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 3.8ms)
+
+
+Started PUT "/users" for 127.0.0.1 at 2025-02-22 00:51:25 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "0", "photo" => "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBAQDw8PDQ0PDw8PDg0NDw8NDw0PFREWFhURFRUYHSggGBoxHxUVITEhJikrLi4uFx81ODMsNygtLi0BCgoKDg0OGA8QFy0dHR0rLSsrLS0tLS0tLS0tLS0tLS0tKy0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLSstLS0tLf/AABEIAJoBSAMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAADBAECBQAGBwj/xABBEAACAgEDAQUEBwUGBQUAAAABAgADEQQSITEFEyJBUQZhcZEHFCMygaHBQlJicrEzktHh8PEkQ3OysxYlNHSC/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACQRAQEAAgICAQQDAQAAAAAAAAABAhEDEiExBAUiQVETMrFh/9oADAMBAAIRAxEAPwCrrAtG3WLus+d2VAJlSYRhBsIbLajGBcwrCAeVKYFhgSYWyLsZviTmaCLznaLs02hD95O3xbfJ3StEObINnlMzpUkCGMEzQ+2VNcNwA7zJ7wy/dSe6j3BtQWRmlswOyHqWLKTRmUjCGBRYUCc1C84rKbpVrYtkhxKB5R3lN80hmxbI7wRUPONkLiBneCLSA04iT6CjtAtDlYNklTIgtkq9cOEkMkqZkzrVgd+I9bVFLaZvjns9rJqMQy6qZxUicJVhtYaoTjqJnKZcGZZQjfezooDOkagfUGECyw7CDZZ5dq6XZYJljRSUKRdkk2WCZY8yQT1ypmCFiRS1JpWVxayqbY5hlWxVjNS6iIXUzpw5IQAMsJUrJWabC4hVWCAhUk5ZEIBJ2yyrDKkzuRACuW7qMqkIKxJ/kGyQql1qjgrEnZJvLVbLquJcQm2XCyLmNlyJRkjJEnbFMqnZM1QbUzRSrccDH49I/Saagd4D2Cwldw5OxSAPdliOPd7pcyru+J8Hm+T5wnifl5tqjAkT1XfhlYkjAIyvTJx09/J/1mLazs/K8bVYnOxVzjPlulzl14rr5/pHLxY3KXt/rAWEDRq7RlSAcHPPhOZC6eX2leTlLjdUvgyNpjopk9xF2iSQkGP9xBtTKlgZziAsE0Xpi9lM1xyhs2xIApNJqoB6ZrMjhIrJEK6Yg8x2bPSMyZ06T0LT6tO2wZadvniVSxWVKzt87dM6ShSDZIYmUaEpF3rgLK420BZK2Gfakz70mtasTuqm+Gek7ZNqRUmattUz7q518ecoVVoxWYqJZXl2G0K2hwZnJbDpbMbik6phlaIo8OrTOwjG6WDRfdI7yToGcTjALZLb5NlC7OqgtYxRFUszhd+MY8hz8s9IfS6bvQTp7KtRgBmWtwLFBxgmtsN5jy84rumN2joBVnU0E0vX4z3Z245HK/4Tq4MePL7cvF/asdXxX0H2b7OUBnuGG3qBW4KthfETg/64inbtCEk0KFcDJx4iT1PwP+Mw19tTdpzXZelNy1bBaEXNvQ4ZTgZ4PQg89GmRTfY4R0ZrdoPe7QxKkAnkeQwCc9MCb5fF1NR6vxfmZcEkxvifhoNW+QmdwHO0MPPoTNPs/UM67GLbCecYX5GMexvtEusYaW7Soy4fDbSSnXHiPqPPyhe0fZbVUW7tNU76UkE93ZudD715J/DMM/j3T0OH6pLl98W7Q0SivIBGCMHHX4nMzFqnoO0GxUEIKscZW1HqsHAPQzJCTgsuF6vI+o5Y5c3bH8wv3csEh9knZH2cBc1SjVR3ZKtXH2DOsqi9lU0rUitgl45HGZZTAvVNCwRdlm0zNm21RZ6prtTAPp5vhmcrN7udHTTImvZW3viZTdJMqZ4KU7pIaCMrmTYDO6VLQG6dui0BGMWsaELxewxyEoxgLDLO0CxlyEHYOIhcsdsaJ2zfjBYrBlYcrKFZ0SmGDCqYJhLqY6RhHhlsigMkPM7CPq0kmK12S/eTPqBgZcNFw0sDDQMbpcLuV1/eRhz+B/QRZYzpvvfP+krHxRjfKP8A08lqVspVHUhbEKAizdycDyOY3pKhprCyJtsBA2kbT15wfL1/ylNJqRW2cbwWAKt05wP6cT1Wn0um1lbKWZbPuhlHIbyyD+0OPiJ6eOXabdGNW7ArT+0rXYbCWsGAvjz1ODjznsOzLTgEge/GTifGe0+230Gr2oVvrABJJKl+MfeA4YYI9OJrUfSeRlRSox9xlLPu+IJH6/jNsYqvV/SCuLdOwA7t0tJYdC4KfoZ5jdGdFZfquzRq7GSw16u4WKgINSuEwMHkLke/7wmeHnkfMmuWsM/ZjMmUUy2Zy7QIGkkwW6cTGFXEXeqHYyuZWwTemCOmj5E7ZK7DbMNMqa5pNVAtVLxzG2c1c6NvTJm05FbbZlCYdhKFZ5wBJlcwxSUNcApKsZcrKMIaATNAWWS9hilrS5iSGsg2aDdpUNNOhbc5gWEK0pLgDKwZWMSjrNICzCVBlrIEmaSKF3yN0CTODQ6kY3QtcVDRqqZ2FTKCXCyiGEzMrUiII1pajlmA4RSSfIeQi6T0nZuk30Ctf2yXss8h7vhx88x8cuWWlYTdYfZWjNzkDywf5uek9VR3VOrWh2Wux6O9yfCMB8Kc+v8AaRW3WU9nVmxjvLcKgHiJ2nHHpnzni9RXqe1NY9tSMULbUscHaijJAyB8fnPV4sNTy3kV+kd0bV/ZnL7R3oUlkLdA6+mQFPHx856D6Ofo7TW1fWNS1tVe4hFUhd4HxGcT1+j9kdBpaEsvp+u3qVFlrZbc3ClsE4CjjnyxPEe03tnqxe9Gns+radGGxNPhTj0z5cjy+eDN1PoXtP8AUOz9A2jCE96MKlLVpa79Qzk+8Dkgz512aSw5OT06efmI5Z7D9o20rqgjWs9YswL0ttZCNw69Tz0yfwmJor9pG7wnOHVk2EYOPmOeJjzYTkmrFzGWarcQy8rqAOGHRhz/ADSEaeFnjcbquXLHrdCqssROWWxFKkMiV2whEjEoK7JwWXEtAg8SprhdskRdiLNVJjGJ0rsY26dmBDyd0zsXsYSdsEGlw8kOKQViQ26VZoBnX1xC9Zr2xC8TbCprKsgsxq5YuyzeE7fJBgsSwEegKDOYSokiAAsSBZI48XcS5VFiJXbCOsrL2aFEZrMWzCI0mlTqNCq0TV4VWmWWKbDiN/vPWdl6wFFQeFQMkA87B+97zx8jPGK0e0mqK8Dq2B8cnEWG8cmnF70Wu0duu1d6l9tXehcnoAOAq+/A5+E+j9iapKGp0yhe5Z3rqKgYwtaksx+JPznj6LAlbmvlqWa/jqxJff8AkxxNrQXbRSQAQtvOT93eCP6vj5T0u9s8OiRse2VTJp7E3WVIWZktry21WA3Bhzxkn08p8V7T07ABkYFq8gYGNy+nPX4z6r7Xe0Pd1olhI3fctB43rnz8v858pNqvY2wlQ56ZCr69CDgdZvhfBX9Ptv0ZadLNJp7BZcSEQis2t3ak8nCdMcn5zD+kjsNarjfQNquQLasfdsxw6+4/1BHpA/RR2t3b9wxG0qrVkHI25OZ7H6Rey+9oGoR2Vqhh1XGLEyDz55H6ysvQxuq+e9n2O9TJw20b8D3ea/n+fukVmJezzYfYWwoBwf4cEvj5gx4jBI9D1nj/ADMNZS/tPPPVMLCiLqYVTOPTnXIlMQgM6MKYlcwxEE0NhaQRKycxEkTpInQIiL5cXTCXW++EXWe+dGXFVtsXS4tmKurhV1Ui8Ya3eyptmeNTON8XQHGsidzyDbFLbZUxJFzRZmnW2RYvNZiWhw0tmLB5cPHo9DywMAGlwYaNZ4JhCZkQADLKFIwRI2x7GyxScFjBWdsj7DaqQyCQK/8AGEVJFqasFktZtKfEyVWD1gwA3ocfOTjfKuP+w+n1mN/oWAYeqnaJ6bsi4FK0Jx4UDHqAcAg/3hPJ6BBjB5znd8Dx+k3uz3AwGH3iUOPd55+G6dkrvwx3GT9IrOmVP3GAO09GI6HHqP8ACeQ9nNcatTRZ3Q1LJYpTTnOLXPCDjJPiIIHmQJ7z2+0/eUKX8bqxXvAOa3x934Ecz5fW5U5BIZTlWUkEEHgg+Rnbx3eLLkmsn6D9g/YM01NqdSMap8OmnDeHTDqRxxk55HIGB756vVMe52ld+SFI64z0M+Pey/0ra2ph9ZK6yn7NWBVarFGeXVlGC2M8Ec4HSfb0CWotlTB6rVWyt1IKsCMgiVYh8LGn7vV2ofCK7WOOngVsMP7jflNG1cEjrgkZEY9r9GV1FN68d/Y9VvHRjUQD+UXA4HrieX833E8uXiJUwqmBEsDOJiZRpbMXDS4aKgXdKNIlWaQSczoMmSpjMdZE5TOjJ83a8iWr1ZkW0xZ6yJ7escmjUr1UZTVTBVyIdL5nlwjTcXUyw1MyEvhO/mN4yah1MXe6J97INkX8ZDvbBl4EvIzK6AXfLB4ANJ3Q6mbR4VXiatDI0i4maUy+IFGhQ8zsSNRpmc4RGcgZIVS2B68Sjpg4IIIOCDwQfSCvtcKzVscqu4othQsB1bAPOPyzHb9WlyVuG3XKAl/AG47QyPkfeODgnjp0lXjvXsvp9vYrtjGjqJZh3asoUg2OcKjFCR59funoeM8QLWhBvI3BcErkjIz0zENHTbqLfC6IDYoG+zul8RGAo8yeOAPSXw4dt2nxY7u2zfZZ3hS8EMFLDccbABnaB0wQRjHu98cXuABuO1T4XJHeujHOG8PUccbeuec9Zh9oaq0iqm/Ld3lXy4Fi4LIyAkHAPrg+UZ+tYrVa66h9kqo1q12lihz4t3C9AOhPI6za8eNu9OjpjvdOPWAyqSoLHarBwEduMAbsEE5GBz8YLXaclHGPEBkfEQfa17+NCm4AWEJZ9ph2qFibOfLPB/i/Gdbc6022ggiqqs4YszEgAHj04YzO/H3d4+GefFJd4s3QXZZRnBJwf9fjNz2ftLlwxIyPC37rpn9M/nPLUaoF94xhzuGOMMTkieh7EvUvYPJiz148mAzx+AI/Gbdde3Rh5ep1GhGp0ttbfZXIoBt6qy5Ow/EH9QZ8V1VLIzKwwwJB+M+y+yvaBNbIfNyGU9CD6fEeUwfb/wBj1LC3SBmYrl6ep+IJ6fjNuO6RyTfl5f2F0dV+u0tN2WqsuYWVglcqtZYcj1Ix+Hvn6M9iAF0KVAk/VbNRpgTjLLTe9QY/EKD+M/MWn1j6e3T30kJdWA4O0EBwSDnyI6ifa/oO7d73T6im2wNcNU9hLHDMLxv3H4uLPnNWCv0j/wDydPUAAMPqDjpw20f1MwszV9sdZXdrC1dgdqal09qchqrFd2OQfUMvymOJ5Hy7vks/THkvleWlFMuJypdiQDJMoxipr95KloJjKhoaIfMukCrQqmSQokyoM6BvCsJRqwYxZXzBlZ7DQq+ni7UkTRIg2WVLQR5lgTDmuR3ceyC3Ti8Ia4MpCaDg8nfK7ZYLCyBOZYGSqS6pJockOshEhdkzuglWhUOektoNC91iVVjLuwUZIAGT1JPlN4dnkbtPVWtNuAO9tv01q6kZGShByrc5wP3ZHXa8MLk8z2rXZW1TbMcMwzhldeny8sR/spdP3xSyw0VWNksoLLSFVtrHPl04GeAeR531nef22dtiMy2CsMyMV6Hjlfh/nENZSjiy5QdPhQ7VjOx+f2T5cZOOvu85vJLj1dHWSdT3bOkeoWVvjIXIZTlXU9HU+YM83TqSpRk8Lo24MOCGDBgfyE2l1g2012N3iFLandgWZVGSoGehG4fIeswbadrumQxRmUsBgNgkZxDhw6yysscevp6HU6ptULXus33itbUO0kqAqkjpwOnuzjz5OOLGKgnnr1A6FiJ2ib7Qbv3GA5xjwnE7vAFUZ/eBweniJlyaXbt6bQ7rKF3ncwqCoxJO1VrXH453fL8ZTS3/AGxoJdRqKmVnztZDjKOuBjHj/KE7FcHSgAeLa3IHPQg/pMO8nep6Eoi1qpwxyuAPyhjPKrfDDZWqsas+Fkcoy+jKdpmvoNSUZGHQPg+hBUqf+6ZvbW43Oz8WM2W+OBzK9nW87Sf9/WaZTc2nDLXh7bs/U92Q+7wkqCvmQR4R8cg4/H1mz2h2iXqXaftKjvRgMlxnIz546HI9PwnkPrGFIzkkKB/MCGH4Zz8zNPs3tDDg8EIQceXJ8/8AXx92ePhrlWV213Wpu0J2pQ1rXUXU14Xun7zFdhPvDIfftabfZf0b66kDVpfTXbpm78KCzhu6VbAAR15BXB9PfC39gq2rTVV1g1sbWvZigSle5OL8HGCpw3HPE85ovb/XUoqU2oK6+8WsNWGUqSCBjzx/Q46TbG79OezVeh1XtAms14vRO7e3Q6capdpUfWqwd+AecAFVz/DHhEtI9b23a/YAvalmoGmrYrvpFb1l7eOmW3rj0aOzzfmT79/8Y8s8pk5kCTicTNMo0uJxEQBMGYdlgWEqGlTChovmXVpNgMBp0GpnRB5y1eZQpCv1kz0+zQqapQ1RwwZlygs1UEUjrRdobIJUnGiFSHWT3uwTGmlxpY4svLmRbIdxLCuNkSIrQAFhBLGdIoafs8zC5QtddiuQl28ZK1k8lfQ+efd6Zj/bPZl1DtYK3t+0HFbYyR5sCrDPUE8ZnmNQPDnzyOZ7jtCwnsrTuSS5FeXJJY8nqYWadvF/XTIp7YVa9SopapzssNneNYxsHCrYp4xgryATjHXyze19Q7aGxW57vau4ElmAewhT6gArJKD6qTgZOopycDJ+zPWL9ujGnvA4BfkDjPhSaY+4d9PO12nKr1UHIHvYAH8gPlHO1tOVsZ8o1drFq3rdbFYYB6jocMMg4PMzgef7v9Iz/wAt/wDqU/nW+f6D5TazyynrS2iOXP8ALx65yB+sFu8K/EceuIXs37/4D/yLAD7ifH9IB732OAOlpBUH7V0Zjj9osQP6fnMd9MUKE8rtGTyOBkE8TS9kz/wY/wDtr/2NI1g4Hxt/82JnvyuenmPaGgmxmPXz4xg854mC3hYEeRnru1x4P/wh/HaJ5PV9DNsLtnfbWruBHTxTQ7MSw5IXIHLcfeBIyvxIPHwmd/z7P+o03kYipcEjI5xxnjMz3pvJ2krR1WsfTppyB3lbMzKN2VupNe10J/ZbbaeD74P2K7H0Wp0tWm12+q9G1OopYN3e7TuKlLfDdjH8rQPaY/8Abqz5ixcHzGa7QcTM9vBtGh2+H/gseHjg2OCPzM0xrLkmq2u0+x/qeuWup1t0z1WfVqxZu+r1HVFiM/tfcyT/AB/wxzfPJ+yLltT4iW2aQqm452LtHA9ByfmZ6ecny55jDk/A3eSRZATpw2MjQsl98VWWEWgOzwbsJUyjQkCCZOYMzoWGOjToJJ0nqb//2Q==", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]", "current_password" => "[FILTERED]"}, "commit" => "Update"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mBEGIN /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Update (58.8ms)[0m  [1m[33mUPDATE "users" SET "pseudonym" = 'polo', "photo" = 'data:image/jpeg;base64,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', "updated_at" = '2025-02-21 23:51:26.017583', "role" = FALSE WHERE "users"."id" = 10 /*action='update',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[35mCOMMIT /*action='update',application='RpCharacters',controller='registrations'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 1043ms (ActiveRecord: 94.4ms (3 queries, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:51:26 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (40.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (2.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 12.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 0.0ms)
+Completed 200 OK in 81ms (Views: 13.9ms | ActiveRecord: 42.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:52:15 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 10 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.0ms)
+Completed 200 OK in 79ms (Views: 14.0ms | ActiveRecord: 7.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2025-02-22 00:52:20 +0100
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 ORDER BY "users"."id" ASC LIMIT 1 /*action='destroy',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN /*action='destroy',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Destroy (51.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = 10 /*action='destroy',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT /*action='destroy',application='RpCharacters',controller='registrations'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 261ms (ActiveRecord: 58.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:52:20 +0100
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 83ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:52:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | GC: 0.0ms)
+Completed 200 OK in 91ms (Views: 20.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:52:33 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | GC: 0.0ms)
+Completed 200 OK in 835ms (Views: 17.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:56:25 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 35ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.2ms | GC: 6.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | GC: 14.3ms)
+Completed 500 Internal Server Error in 591ms (ActiveRecord: 11.7ms (0 queries, 0 cached) | GC: 40.1ms)
+
+
+  
+ActionView::Template::Error (undefined method 'pseudonym' for nil)
+Caused by: NoMethodError (undefined method 'pseudonym' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'pseudonym' for nil):
+    33:       <div class="d-flex align-items-center mx-3">
+    34:         <div class="card">
+    35:           <div class="card-body">
+    36:             <h5 class="card-title">Hello, <%= current_user.pseudonym %>!</h5>
+    37:           </div>
+    38:         </div>
+    39:       </div>
+  
+app/views/layouts/application.html.erb:36
+
+Information for cause: NoMethodError (undefined method 'pseudonym' for nil):
+  
+app/views/layouts/application.html.erb:36
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:58:20 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 53ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | GC: 0.0ms)
+Completed 200 OK in 492ms (Views: 32.7ms | ActiveRecord: 7.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 00:58:28 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 120ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "Matthias", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | GC: 0.0ms)
+Completed 200 OK in 451ms (Views: 25.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2025-02-22 00:58:36 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | GC: 0.0ms)
+Completed 200 OK in 68ms (Views: 34.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2025-02-22 00:59:07 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "pseudonym" => "polo", "role" => "1", "photo" => "data:image/jpeg;base64,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", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]"}, "commit" => "Sign up"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Exists? (27.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'gezrgfegzgz@gmail.com' LIMIT 1 /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mUser Create (6.6ms)[0m  [1m[32mINSERT INTO "users" ("pseudonym", "photo", "created_at", "updated_at", "role", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES ('polo', 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEhIVEBAVFRAVFRYQFRAQFRUQFRUWFhURFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0lHSUrLy0tLS0tLS0tLS0tLy0tLS0tLS0tLS0tLSstLS0tLS0tLS0tLS0tLS0rLS0tLS0tLf/AABEIAKkBKgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACAwEEBQYAB//EAEEQAAICAQIEAwYCBwUHBQAAAAECABEDEiEEBTFBE1FxBiIyYYGRI6EUM0JSYnKxBzSCwfAkQ2NzssLRFZKis+H/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QAKhEAAgICAgIBAgUFAAAAAAAAAAECEQMhEjEiQQQyURNhocHRBRRxgbH/2gAMAwEAAhEDEQA/APnGDIV6Td4Pm9CjKI4HaUuIx1NbicrUZnZcHzRWmkSjDtPma8SymwZfw89cRlmVbJSwNdHZZ+CQ9pZ5AgxHJpG58NvLZSbv7/lOOxc/bvOx9luND+JRAvHvsDQJAOx9esDlGS0UwRamrOtyjW9KSVUqx8l92io8tgfvGHiEbIFKqz+8E2V9IUXZBPbp6yrynKwZ1IAUqrM+wJK/vDv7qiRwJrOhpmATJkuwBdgXS+Wo7V0PynLLR60NmrlUhcwunItdPYrZA39VmFnxlm1D3laglbtrW7Uk/wAIPnFY/avDk4jwrLE2tItoAaH4jduncDv1mnhb8XWQD1VV6BSe4FdTYH0PnuLGozGbNifCExeMRuqalUFm2DC+yg9PWVdfFEPlOJd8jEl33O2lAAitQu+pmllyOngFkFrlewNrUuVCjz2F+lQs2Sho1AKcysuwvrqahVbHe/SF09gVmPxnBOSj5cyYvEQoCo97WvUb0SdIP1k5mxAi3FEHXqIA0pqCoCSQN2rbbaWM3Caiiimyasmz+9S2TqJ7Gt5zntgWORMfunFp973RdqxNBuw3389pkhZSKHFFS1rdUOvmBX2ilh5UKkqRVbdj+YijOtdHmy2wyYtjJBgsIrAhbGAxhNIAihoGoDCOKQGWAeKFAxgaLaeBmGY3VCGSIJkK0JKRaVpYxmUkaOVpiTRcgFbnkMYqwmoQcUApLy45LcNMFGXkWJYTRzcPKbpUA6E6IQWEBCqAc8DPXBInoBqAHGAiuko8U9wQYrKZSROMUirlgpCySEEg+yg1Z1nsFjdsuQgFkTESwUBjbMoC0fOm+05VBPoX9lfGopzYG2dwrr0Gy7bN8tV1N1s2NJzR0HBF00O7AnIj4xjOnWcpIAvpQJH5mZ+bhw+PSQcS6zi0qxoLuzBGq+rAWPPaWBhQ8SG1eIu1b6WYgMdR/wDgD6idbw4wnDkOlfErGdKhGXx9II011oqfsY72dd0cjyDlTYX04wNLP7zvrLaOptidyQp85vZMw/ENfqsi3R/aKjYehavvNJkQYk1ODlpiVBNF9J1aRXYHpQmRwyE43cbA5C1sv7trqrtuJOZSG9nuaAMUIG+pwpOrq67MB3qukbxWIouMMBV41J6GwCSfTa/pG5lC4cRs+6cRJN7k1sB263KvPXVMLZMzhExC+oAvfQD/AISB9YEZnuOULlK49IbQWPUbdWax6gb+U5XmPBF0XIo3NggkGgd7A69o3gPaDFnbNoD74xqdlKKFG2kXufP6xuHj8GVUCE6Eyut9yUrcepr7w3TBVpo5vjhkDfioceSlLK1XdddvSVGeXfaDKTlJIIO4o1tpZlrbbtMpml1LRwyj5MYckjxJWYyBc1mSRZLz3iSvBMVsaiwc0HxYgyVihHEXAqMWQYQCyJKrJqMURhGQBGLPBYYWYmximOxvEqIYhoRmhhMt412mTizS7iz7Q0Ke4hBM3Osu580o5muAeLEVPVIJhXAXFmDDMGIFmPqgvBuFKMSKEMISLDKwsaxKKMlROn9ismNTmZkD5BjHh3vVmmIHn8I+p85zdTe9klvJlGkt+Bk6GqpkN/eoWgQ1JHUctDjCg1IjMnusRar7+lrvtsQfkRO64BBixnCBeMqLK0FBFkFPLofvOd5I3jrgxhBoByK580ZrJ+6ruOzGdNxeMK5Ui/D00fkd2sXvsR284sujqj2Aujdl3yKrEk2SCV/8IJVbFXDKq7OcYY7bn3dzXqfzhIxD5St6dAIOxJ3PQep/1vGYMZOUavhGMKovuSAAfnQI8zZkuy3QvnFNiSrHvIxvyXeq89pyft/xHjMOFQEh2R2ugNGBr6/M0N/IzrMn7WL3fhLXf7PwqACOwnL865eGzlNdF8QCg7FRjs39dQP0MMexZdHPcVwCZMZRMhxKVpgm9qSLG110Iub3KOT/AKLw51qt27INWrYr8bEdTsNplNjOM0h2KoGJ6e8xF2PQzpuZpS40c0ycODtsNVWzfkNo8hInEe02fXmL1V2fpqNEfKZJE1ucgM9qQw9/4STQDtQPzqpXx8PGRyTfkymmIftOF9Q1D1NbS3/6U1ahkxMP59P5sAI8cNFPwY7Wv8pK7/5yir2AH/0fPVjGXHnjKZNv8JMVk5e6kB/w7333P2HT61LfAKyNQUZCelgK1+akDc/KanMjkzAUpKogJ1421gdzSjcfD06d4uRLg3Ds6fiRhLNFZfovZX5fyjhnG5yuf4SqgfOqjc/sxjonHnAYVtl2H/uHT7TR5Dy53wjMo8XGQaOIqxb85ncx9ouCx+7kwZdQJDBgAp2+EhiL9QTOXGszq/1Pe+Zj/pkE1H9Hf7mJxPCtjYq1WP3WVwfmCpoxFTL9oOMwgrm4fGvDlqOnFmOXtfv42A0fTbeaXB5hkRXHcD79xOqUaPmRqrJ0wgIQigZ5RCMkQHMNitE6pOqKuEsKZNoekaDEK0PXGsWiXaIyGGzRTwMaKAnp6eqI2XSIJgapLRdxLHoxhGCJDQrliaGiNxiLSOQTUMwis0OQcXkxZQMaqzZQMVP0p2Xp5HYbymBNf2QIHG4C1VqatXTXobRf+LTM+iSb5I+kck4Y8PiUGyxGPURqViTd1W4GwlP2n5lkPE48uM6Qqr4uPfGWLAqXPmukCgTNvguGH6UhyKS+gMCN/etuo+Xn6SvxuAZv0pW0pQxgM4HuuqsSb7DpI8vuejxLTE1jokNkBFdeqCh6d4zFhpsqgfCUYEdWfRSt9xF8K1haJLKmIqWFUDQK/K+4nuU6y+XO4Ol3KqGAUrjxilJ36nc3FCe4qmfE/wAJyKmoAjcJbgDytgBOF5nzIvnrVZRGT3hdtTB7bvtXTznacPhbLw7H4SpzsApK6RbaVA9L/OchmyKmZ2CAppGQBrPxINvluTDHbBLSGuV8J9W9jDZXY6AWfb6ETa5hwxODE7MT4mNw5e7qqFbek5/nYfGlu2mhjZhhWtK6gdND4rG3U9J0PF8amTQheyBQA+BcaY7ZvK9Wnv27RpVQsbOGz8AuI6QdQtjZ+ZvT9LqHjWafH4Q6lw26hSQT1BABI/KUcaxujkn9TPBJc4fk2XJuEKr3ZtgB5zV5NwSmiVJPcjYj5bzpQp2Uih5WL9CfOQl8iukNGH3MLl3IMGMDKx8VxuCbVQfIAdfrcdwjOodsWM5UUklFP4gXucZ7/wAvf1lvPia6Neg7Svg4s4cgYfW/Izi/vZwyJvovHGqMbiPZ9ON/2jgeKOFiTrVGKq97srp+y932vczYx+z2MpXFheJJFEOBV12HnFcbyPAeIPFYsjcNkajk8Ijw8rGzqZP3t+o32lTnfPmxLs+PJRG/Q2Ppv6GetDLGXsk4s5L2n9h+DWvB1YmPQB2bbzp72+sw+WcIcWvEWDhXoEAjsD3lrnHO8nE5KFH0FDb59dp7hMGlQt2R1Pmx3J+83K3oSfihwkGGBIqChLIi3MbFZJgi9UNWijJG0wjRYWHcQrwwYRaCniJKwyIGNFCanqjSsAiIUEPFRmWJuKNZhqYYaBpkiXFH42lrG0pLLmETGY9Ztex6j9NwXVaz1/lb8/L51MhBNb2YauLwH/iL1hfRJfUv8n1nGVGdNDEVjJ94tekEgWT86me+NWxcSBpt8j2S22lFUWWA6bn1ljWQfFLBl8LJbL5jdl+XXpA4PhgFOO6Q4ip1EXeUqNvzM530en7Y/SxZWB0b43O5P4YJ0gDy2Xb5d5GZlBOG2GpvdPunURj1MR/CKUX86i+Ly2cyai1lMa1sSdzo8+lfeORQ+Z30ELixnGNYIFaiSy79Dt9PWAxWbM2LhMnvBAyuoOMLqJYkaUT9nqT9TvtMXmHA1ofGPhGIFtwAgpQeu+zL9p0Ofhs5XGmJsXD4QgLeLjtyW27mlJ3N117GV+b4vw1RzqclmZgfdXHjvSoHVrJJ3HXpMkZuzlOdcBjdkQ5sgvGdRWgr0QKYsNySRt1mXxvLKy40DuMWtG0/ssHqrHcUOm3Sd1ytFfgBnZRrx4s+QbWBkNldqsmiROc5ZxWNFxZci+LiBCMzBCfFb4F09R5X0A7yjWia7F8Uw1ZkNWEUqEFAKL+e426yvy/FdE9CaHrL6hA+XNkyjBi91F1G9WstSd96GwHmZOIDWgGyi6rbbpX+vWbIvBHNNebOs5fi0pQFAUB3s+fylsYq69YHAr7gAFD/AF/r6SxlYAEzllD2yiZj80zlBai3JAH59foCfQTD5nx7Km4Vj3JFfUzT5ji2VzvqYAbkVp96677IfuZyvtXxI01YN9K6/wCrnB8m+UYr2dWGKabYsc5T9H3sMSVB+db1fQbTk8g8VjROkE23me+8Lm2XThTCDTFhYHc77/nH4kCgKOgnd8fCq5HLny8NLsPBgVegrtfeWFWLSPWdyRxcm2RpkaYwieAhDYrTEZllt4h4GhkypCqMOOeCwDWCqxqieAhKsIoSCN0wUEcoisdAaYtklnTBZJkCTM/Ksr1LuZZWqZxFUzIOOD4UeDJqMVSEjFLGFJ5Y/GILC0MQS/yRq4nAf+Nh/NwJTEPGxUhhsVIYH5g2D+UNkmqZ9a4LCzFtRYI1urD3RbAg1V2aCy3iT38oG4qh0Yk2SWuugPY3KPC8zyrjwa1fLkdMTPdLoJYA3fezdeSyzy3g3LZg+QsfEVU2VSEGksoI+ZO+1XInpfmSuMJm8ImtKnJZUmndtzY22P8AX5SzxunHiLpaPpdwGsXZFliL8x07Dyk8Vn0guVoaVrcjUxICLZHzH2MyeK4f8FcuQ02bIhYDbdwCBdg3QAJPYATdC9lrmuZcTOVIyZWCoxyeIa1UaHb901B4hCuHGznV7zBgvxMNVEauw7fSA2Enx3b3sisz7b6UoUQL8g33h85z6seKibcAgUOhOw6+sFjcRnFZh4a4VUrrQ2jFdsRP6w79xW3pOH4blKowVB4rBtYJ1qQuM6XQgAgk0pDbdPnO148VlZVssMWM1SgWCR1Pel/pMDHjyELpNP4mcHc1Z1HTSkWOm3yjcmKorso8XzWsxxnCrLlRWJyaW0sgDIy1tYJJvtUt+zWNWbW51MTsvYA9zOf9reDfh/BV3JyN3sGrCk0flNf2c4xegAs1Z8zLxpQVnLk3OzulcAUDIc2PlKmFidx32+kZx/EjDjbIRdFRXSyWCgX2FkfeQrlt9Bf5GBzLjA4JHQEqh/hFBj8ve1/n5zi+eZQGF+8b2B237H8pv8zy0oUeVD/zOM4zOS5s7hTZ22J7A+lzxMb/ABcjk/8AR6LXCFFPGpfICd66/Tp+dfaaAERyxDRc/tHb0Eu1PexxqKPFzS5TZONZYURSmSWjElobqk3EiTUIbPPEGNYxTTGs8DIg3J1TBUiRGLE6oxGgHTLKQ6i0MaDEZVEiS0DVBZ4YsSaE5pWqNyvEXHbsgrKC8PtcSTU6NMPapR4jgrPSZoustPZmK0ejRicBR3ltOFUCLQ7yR9FVWjsSkkDpZAs9BZ6mSnDEtQE1+H5eTQOwsQk5SR9N45B4oazpQKSVBoaCWAr57RPs7wgQ+KxYvnfxGBIoX7qC/kJpuoum69gN9VC/9dZS4vJ+qc7UdRN2BtVaWu9zQXzryklo9F7A5rwhYEMzFTnOw6kFdIUb9P2r9THc0KsvD5BXh60K/COtCvpFce5bGUS1UZAHClQCSmyi+x8vWP564GPHhQC6Wr7EVTEnpv377wBXoqMylMuVm1DL+FiXcF397cAeoG/kYGHAb4RDdhNRvtVkWfSWsmYHNw22pi2wXfbTu59NpHB3kzZXtWOIkavlTah6bfeChrKfFDS+djsipTN3vQoIHzLH8pz36cyMyKjOBqOwpgcgAZmJNbDp/N8prc8zlOC4niKBvIrigxO2QEHbr0nKcn9pcjeI+VRiCnHlcBrGlauwd/2d/KMk3sDaWij/AGhu14MVgUHevjoHQAPy85PseGZtTHp9N5le3vGHVgI7rRrbekb/ALvyln2UDswNhF2O/c+e3WPekcs15H1jgxt59LJ3mH7Z8wOnHhW9KOcuY0oGjGDpVj562U1/DNPDnVQBuWWz3q/OcVzfCubiQQ504iRmXcA5Wp8Y8m2D35e6O8ORxjhk39hYK5oq854khSeh7k+f7s4/DeXIQO/5L+03+X1mr7U8TZCLZF/c9h9TY+kjlPB+Gu/xHqf8pwfDwJLk/Z0fKzUqLiY6FDoOk8whiCzT0meUDcJYsmErRDUPAh1E65IeazUE4ldhGs0UTNYGLYQajSIJEYAoiGjSGgQMeJaTJGrklENC8STZ0xLT5Is5ZXbJALwWFx0NytEXBLSLjEuJu4eNBJ7wcvFDvOO4Xi3EtLndvOOpWhHCzay8Uoizx47THz4nG5ldc5gQYYjo+F4ve5vcs41S6KRqtlGkGi1npc+feMfMzX9lmLcZw4v/AH2Im+lBgT+Qj2UcLo+5rnrF4uYabLEgW9LpO4IlZsgaqQ5NTFlVK0gAg2b6Vp6nzHnNlsa1qaz7vwk7Vv2+sq4G3b3QERCoqhd0arsKA+s5zvOd5jzbDkPg4siqfFVsoYMDXvDQrbUaFXvMrjef4Dnbxcj4/wAPwlVBkLFydyVFXQ8vI3U6XxTXjNTFMzAggBUSgulL7X39ZynPORjJzBMljXo1Yjp2GvUGZl76aNesZJNmtpHUcv5iQ+PIuNQWw5vAxA2VxoEpm8ixU7fP1iuWcWOH4J8r+7ndidO1ncK2nzG/aTgxZFVfDKu+NcmIs6gUr0dZAN1tf3gc24dU4IDZ60KGPdmcMwHpREUYHmGPHkXNwqZC2J0ABs2rMLYG+pF/0nNZuUqmHLiZQ7bjIVAQsAABe/U2Op6CdDxd4vDAUALTslge+wPy22a9/KZPNuJ8LE+XM4CsAzjGpcl791V76bZR9ZkzNHG+2q63xLQAQuCAAKbSvlLnsrwnvXeojYDy/hHmf6RXtrw+OsZJYP4nwk0dOjre21zU9lzjGkgDT0sA3fpLwpo5Mv1G/l4F1U5WJPT/AEPT/OcxlzKqNnC6TlCubG9raBvPoF+oJ7zrPajmmjCiAr+JkwqQ258I5FXIQPmDX+KfMueccf1KH4tuvz3JnL8pOVY10/8Ai/krhpeTAwN4jnKfM6fXu322+80UaZ2FaAA6CWkMrDxVHn5ZucrLGqC5kAyGjWTQIhaostI1wWOkODSdUSGkl5ghnJJEWojQIyFaCqQRCAkGOBIS8W0cwiXEVlYxALRbvJyGIYyTOiKGB5BaLuCxhQGN1SblfVC1x6EsnBgrqJtcHjQ+UDLw5IsdJj58j4zsYL49nBGTbo3Ob4U02JyN7zSPElxRlLLw9bzKSfR14GloWZpezOA5OKw4w3hlnFtt7qgFnbfb4Q0zJ0PsB/f8G2q/GFeuHJ1jPo6Etn3jV7lk9FO25sDe/mdvzlbjC3g5FQEHVkB09WpbpT60PpCz56sAVpo+d0Af6sv5ymmdhw9kgagT7oqlUEt17mjIs60K4/glHChSzFAVJ96y7XuCT63MT2q50nD8ViACvxJVfd7jHqcaiew6/f5zb5y34vDYBenUzuu1A0zW38IqvrMfmXLfGbI5sWBksiy6Uq6PlshPy1Qxq9mdtaL3B52dmTHYGTGzMxB0ousqSPMkavl0iP0oZS90nD4WTw1NglcZYk79yfyME5mwYif986YSBtRyvYXEtdQK39TF8Sj4kxow1rlca2NEMNCs4N9LdifvFGM5uJL5HyFHcs+rSoZizKqmgTsNq60BKvMODz5f1owYFXG5Nn9IfYqboEBe9GzvU2eYsyeHgDMCcjs7LQDH4m6dtRAH8szuOze9lN1QCdhvu1dOgUKPqIegM4T2yvXj1MXYkoXa1BCbClN6aB7dyZueyWYKyjVQAuz0IrrfpOf9uOJL5lW70PkXtt3O/fc/0hcLxxTCNApmFKepvYUB6X9pSL4xs5pq5mx7Y8+Rs7Eb6ExKvkGpiwA9GT6ic1y/Ax/Ef4m6Duq+Xr/5nuH4BmbxMp36het31LH/ACmioiqO+TI5suuEQlEcogBZMLOarDi2aHAMzGoEmDCk1FoIIMYiQajkhSCSBIuFAMoKNUwogNDDwjJEtEZDGO8rO0RlYoTkMQ0c8Q8mVPAyDBuTcZEpM8JMgwNUdEzV4Pi9usnjMIcX3mcQB8o/BxdbGByUtEJYU/JFbHjKmWHAIl04Q/SVeI4ZlnM8cou0LHsysmA3N72L4f8A23h76eJR+qkTOUb7zqfYXhfE4vHvWgO52vYDSAPqwh/Gd0dUMjckj6k+MNiLruWLFm3JsMNrryGwi8hvTiVtbAri3332Zya7hbPr6S2mQLjOrSPisE6R6ekpeGoGTNqKYwKVh+6V1O67be7QB7bx2eigc4R+Iy1TaMaqxA319AL8qJsfIRWXJ+DhyEXqAD97V11Hf7n6zneS8dlyZXyI5KZMlItBQ2O6BG2qjbfQXNrm4deGOPUPEtEIQbKWIYJXYBSnlDQTycTiyHJxeSxgw4iUDrpt8moawD1b3SB67SpzniWK8CLAbSGIH79C7MdzxVTAH0K3gvhIRy3h0AQCQPiqxt5V5zHDZDoGbMrFX4d0VAwK48hNhmJobjy6GYxY5hlLcbtXuj5UDYBA+qtcxOaZQcTkEFSc7WKshas7/wASibHFuDxZrtp+7asl/TUJjcXj1Y9IC1TA6tvdOWyfymMz5xxaOuPCGsOxyOxbqSSp6/WbnKOE0rqPU9PkPP6wee4Ffi0RRpVcak72N+teXSaiitpS7o48rp0KfHF+FUtQGgbI8UV5BaMYRbQGoEtALSXMQxmoVjlMasQhjlhSFGCEDFiSDGSHJYwNU85iwYRWMBhXFap4vMOjztFsZMFojKpCnMruY7IYgxAsGTPT0eKJyIYxVxpMC44tAcTlJi8eUw8kTOdMX0avAcYVPynQDMrr85yuDpNLgZ0RehMkV2Dxq6TOo/ssUNxTki9GFyO9Esov7X+c5XmvQTrf7Jf1nEf8tP6ZJJxVlsCtpnc814kjEAF1AhtVEE6mPw+XnMvnWLizwycOhw4cDrVqrFiDWoahVWDV13mjzb9UP52/yljmv93wfT/qWFLR6HujK9nXZs2ilPhKFxBdQQvsAxK30U1Z6dusjil4sa3ONXXHlOZmwMG1EEIQurSSQANulL92/wBnPxP/AC/9xmjk/uHF/wAuT/6lg7M9HOc1VswONMpZcmrJm8RWxkElR4YUGrAUbEGqO+8ucv4LH4ulA7paK+TLq3Kj3VVW6gGt+mw67yhxf68f8k/0nRct/u7/AMy/1gGMDi0GTiyHsFsqGgdJqmXTt1B0kzG48X4jir1sOv7CMoCgek3uO/vaeg/q8wua9T/Mf+lphWcxX4uRzvZ0g/wr/wDt/lLavFcV8R+sjHHieXKbcmPuRBhxqCpCyIp40xLTJGbFNFNHNAMLQqPJHrFCNWZDh1AMOA0JgWaLLSXiYQJDNU8IAhrEZRImA5hmKyxGVEuYswngGBAZ6eM8ZEoibBYwbnnkQgR//9k=', '2025-02-21 23:59:08.514704', '2025-02-21 23:59:08.514704', TRUE, 'gezrgfegzgz@gmail.com', '$2a$12$WEn1W3d1RtwiHdVLOUcAf.RU44Y0h26O06ulkbDBiYZH7NDe/aCLe', NULL, NULL, NULL) RETURNING "id" /*action='create',application='RpCharacters',controller='registrations'*/[0m
+  [1m[36mTRANSACTION (54.0ms)[0m  [1m[35mCOMMIT /*action='create',application='RpCharacters',controller='registrations'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 686ms (ActiveRecord: 89.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:59:08 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 11 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 11 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | GC: 0.0ms)
+Completed 200 OK in 251ms (Views: 100.5ms | ActiveRecord: 24.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 00:59:39 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 11 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 11 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 15.7ms | GC: 2.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | GC: 4.6ms)
+Completed 200 OK in 112ms (Views: 22.8ms | ActiveRecord: 12.6ms (2 queries, 0 cached) | GC: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 01:00:37 +0100
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 11 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='RpCharacters',controller='home'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCharacter Load (28.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = 11 /*action='index',application='RpCharacters',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 61.1ms | GC: 10.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 66.9ms | GC: 10.5ms)
+Completed 200 OK in 154ms (Views: 38.7ms | ActiveRecord: 42.0ms (2 queries, 0 cached) | GC: 19.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2025-02-22 01:00:51 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 11 ORDER BY "users"."id" ASC LIMIT 1 /*action='destroy',application='RpCharacters',controller='sessions'*/[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 69ms (ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-22 01:00:51 +0100
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:00:52 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.0ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | GC: 1.0ms)
+Completed 200 OK in 84ms (Views: 58.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:01:03 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.8ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | GC: 1.2ms)
+Completed 200 OK in 579ms (Views: 38.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:05:32 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 56ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | GC: 0.0ms)
+Completed 200 OK in 815ms (Views: 24.2ms | ActiveRecord: 64.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:05:39 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 493ms (Views: 8.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:15:54 +0100
+  
+SyntaxError (/home/debian/Bureau/rp_characters/app/controllers/application_controller.rb:23: syntax error found
+  21 | 
+  22 |   end
+> 23 | end
+     | ^~~ unexpected 'end', ignoring it
+):
+  
+app/controllers/application_controller.rb:23: syntax error found
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:17:24 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 35ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.8ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | GC: 0.6ms)
+Completed 200 OK in 721ms (Views: 19.3ms | ActiveRecord: 19.5ms (0 queries, 0 cached) | GC: 3.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:17:31 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.9ms)
+Completed 200 OK in 661ms (Views: 11.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:21:12 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.9ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | GC: 0.0ms)
+Completed 200 OK in 715ms (Views: 49.2ms | ActiveRecord: 149.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:21:25 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 132ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 8.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:21:32 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 179ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 200 OK in 569ms (Views: 14.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:24:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='RpCharacters'*/[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 350ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 58.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 182.2ms | GC: 0.0ms)
+Completed 200 OK in 922ms (Views: 214.8ms | ActiveRecord: 86.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-22 01:24:33 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+Completed 401 Unauthorized in 174ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"pseudonym" => "polo", "password" => "[FILTERED]", "remember_me" => "0"}, "commit" => "Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.0ms)
+Completed 200 OK in 439ms (Views: 15.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

@@ -3,10 +3,14 @@
 <p>Your email : <%= current_user.email %><br>
 Game master : <%= current_user.role %><br>
 Your profile picture : <br>
-<%= image_tag current_user.photo %></p><br><br>
+<%= image_tag(current_user.photo.presence || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGpDBy8XfSYUrr-axNBAALaM9uY3HINONelw&s") %>
+<br>
+<%= link_to "Edit your account", edit_user_registration_path %>
 
+      <%= button_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
 
-<%= link_to "New character", new_character_path %><br><br>
+<br>
+<%= link_to "New character", new_character_path %><br>
 
 <p> Your characters :
 <% @characters.each do |character| %>
@@ -15,3 +19,6 @@ Your profile picture : <br>
         <%= link_to "Show this character", character %>
     </p>
 <% end %>
+
+
+
