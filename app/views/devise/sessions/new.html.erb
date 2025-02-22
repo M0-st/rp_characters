@@ -1,8 +1,9 @@
 <h2>Log in</h2>
+<p>Nous n'avons pas reussi à faire fonctionner le log in, mais sign up fonctionne</p>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
-    <%- if devise_mapping.recoverable? %>
+    <%- if devise_mapping.rememberable? %>
       <%= f.input :pseudonym,
                   required: true,
                   autofocus: true,
@@ -21,7 +22,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign in" %>
+    <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
 
